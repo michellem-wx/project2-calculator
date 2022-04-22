@@ -1,2 +1,1 @@
-# project2-calculator
-Project 2: Calculator using JavaScript
+Create a calculator using Javascript.
