@@ -1,0 +1,217 @@
+$primary-background-color: #e5e6ea;
+$calculator-background-color: #ffffff;
+$calculator-border-color: #e5e6ea78;
+$screen-primary-font-color: #36515a;
+$main-button-color: #e6e7ec;
+$main-button-primary-font-color: #b0b1b6;
+$clear-button-background-color: #ffeec0;
+$clear-button-font-color: #e9d5a2;
+$operator-button-background-color: #f89b00;
+$operator-button-primary-font-color: #ffffff;
+$equal-button-background-color: #11b985;
+
+@mixin button-rows {
+    button {
+        font-size: 20px;
+        width: 70px;
+        height: 70px;
+        border: none;
+        border-radius: 25px;
+        margin: 5px;
+        background-color: $main-button-color;
+        box-shadow: 0px 2px 5px #0000001a;
+    }
+}
+
+* {
+    font-family: "Trebuchet MS";
+    font-weight: bold;
+}
+
+body {
+    background: $primary-background-color;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: $calculator-background-color;
+    border: 3px solid;
+    border-color: $calculator-border-color;
+    border-radius: 15px;
+    width: 350px;
+    height: 650px;
+    row-gap: 10px;
+    text-align: end;
+    align-items: center;
+
+    &__screen {
+        border: 1px dashed grey;
+        width: 90%;
+        height: 100px;
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    &__row1 {
+        @include button-rows();
+    }
+
+    &__row2 {
+        @include button-rows();
+    }
+
+    &__row3 {
+        @include button-rows();
+    }
+
+    &__row4 {
+        @include button-rows();
+    }
+
+    &__row5 {
+        @include button-rows();
+
+        &__zero {
+            display: inline-flex;
+            button {
+                width: 160px;
+            }
+        }
+    }
+}
+
+// @mixin calculator-buttons {
+//     display: block;
+//     height: 50px;
+//     width: 50%;
+//     cursor: pointer;
+//     // border: none;
+//     border-radius: 5px;
+//     transition-duration: 0.4s;
+//     justify-content: center;
+//     align-content: center;
+
+//     // border-radius: 20px;
+//     // border-style: none;
+// }
+
+// .calculator {
+//     display: grid;
+//     grid-template-columns: repeat(6, 1fr);
+//     grid-template-rows: 20px 100px 5px 60px 60px 60px 60px 60px 20px;
+//     background-color: $primary-background-color;
+//     width: 400px;
+
+//     &__screen {
+//         color: $screen-primary-font-color;
+//         background-color: $screen-background-color;
+//         grid-column: 2/6;
+//         grid-row: 2;
+//     }
+
+//     &__row1 {
+//         grid-column: 2/4;
+//         grid-row: 8;
+//         border: 5px solid red;
+
+//         button {
+//             @include calculator-buttons();
+//             display: inline-block;
+//         }
+//     }
+
+//     &__column1 {
+//         grid-column: 2;
+//         grid-row: 4/8;
+//         background-color: plum;
+//         border: 5px solid red;
+
+//         button {
+//             @include calculator-buttons();
+//         }
+//     }
+
+//     &__column2 {
+//         grid-column: 3;
+//         grid-row: 4/8;
+//         background-color: plum;
+//         border: 5px solid red;
+
+//         button {
+//             @include calculator-buttons();
+//         }
+//     }
+
+//     &__column3 {
+//         grid-column: 4;
+//         grid-row: 4/9;
+//         background-color: plum;
+//         border: 5px solid red;
+
+//         button {
+//             @include calculator-buttons();
+//         }
+//     }
+
+//     &__column4 {
+//         grid-column: 5;
+//         grid-row: 4/9;
+//         background-color: plum;
+//         border: 5px solid red;
+
+//         button {
+//             @include calculator-buttons();
+//         }
+//     }
+// }
+
+// .calculator-container {
+//     display: grid;
+//     grid-template-columns: repeat(6, 1fr);
+//     grid-template-rows: 40px 20px 20px 20px 20px 20px;
+//     grid-column-gap: 10px;
+//     grid-row-gap: 10px;
+//     background-color: grey;
+//     width: 500px;
+//     padding: 50px;
+
+//     &__row1 {
+//         grid-column: 1/7;
+//         grid-row: 1;
+//         background-color: aliceblue;
+//         display: flex;
+//     }
+
+//     &__row2 {
+//         grid-column: 1/7;
+//         grid-row: 2;
+//         background: plum;
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     &__row3 {
+//         grid-column: 1/7;
+//         grid-row: 3;
+//         background: plum;
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     &__row4 {
+//         grid-column: 1/7;
+//         grid-row: 4;
+//         background: plum;
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     &__row5 {
+//         grid-column: 1/7;
+//         grid-row: 5;
+//         background: plum;
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+// }

@@ -1,0 +1,87 @@
+* {
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+}
+
+body {
+  background: #e5e6ea;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: rgba(229, 230, 234, 0.4705882353);
+  border-radius: 15px;
+  width: 350px;
+  height: 650px;
+  row-gap: 10px;
+  text-align: end;
+  align-items: center;
+}
+.calculator__screen {
+  border: 1px dashed grey;
+  width: 90%;
+  height: 100px;
+  padding: 5px;
+  margin-top: 50px;
+}
+.calculator__row1 button {
+  font-size: 20px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #e6e7ec;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row2 button {
+  font-size: 20px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #e6e7ec;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row3 button {
+  font-size: 20px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #e6e7ec;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row4 button {
+  font-size: 20px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #e6e7ec;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row5 button {
+  font-size: 20px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  margin: 5px;
+  background-color: #e6e7ec;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row5__zero {
+  display: inline-flex;
+}
+.calculator__row5__zero button {
+  width: 160px;
+}
+
+/*# sourceMappingURL=index.css.map */
