@@ -9,18 +9,29 @@
         <script src="calculator.js"></script>
     </head>
     <body>
+        <header>
+            <h1>Online Calculator</h1>
+        </header>
+
         <!-- Wrapper -->
 
         <div class="calculator">
             <!-- Screen -->
-            <div class="calculator__screen">Screen</div>
+            <div class="calculator__screen">
+                <p>Screen</p>
+            </div>
 
             <!-- Row 1 -->
             <div class="calculator__row1">
-                <button>C</button>
+                <div class="calculator__row1--yellow-button">
+                    <button>C</button>
+                </div>
+
                 <button>(</button>
                 <button>)</button>
-                <button>/</button>
+                <div class="calculator__row1--operator-button">
+                    <button>/</button>
+                </div>
             </div>
 
             <!-- Row 2 -->
@@ -28,7 +39,9 @@
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button>x</button>
+                <div class="calculator__row2--operator-button">
+                    <button>x</button>
+                </div>
             </div>
 
             <!-- Row 3 -->
@@ -36,7 +49,9 @@
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button>-</button>
+                <div class="calculator__row3--operator-button">
+                    <button>-</button>
+                </div>
             </div>
 
             <!-- Row 4 -->
@@ -44,17 +59,21 @@
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button>+</button>
+                <div class="calculator__row4--operator-button">
+                    <button>+</button>
+                </div>
             </div>
 
             <!-- Row 5 -->
             <div class="calculator__row5">
-                <div class="calculator__row5__zero">
+                <div class="calculator__row5--zero">
                     <button>0</button>
                 </div>
 
                 <button>.</button>
-                <button>=</button>
+                <div class="calculator__row5--green">
+                    <button>=</button>
+                </div>
             </div>
         </div>
     </body>

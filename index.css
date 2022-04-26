@@ -7,6 +7,10 @@ body {
   background: #e5e6ea;
 }
 
+header {
+  padding: 10px;
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
@@ -17,15 +21,20 @@ body {
   width: 350px;
   height: 650px;
   row-gap: 10px;
-  text-align: end;
   align-items: center;
 }
+.calculator button:hover {
+  border: 1px solid #808080;
+}
 .calculator__screen {
-  border: 1px dashed grey;
+  border: 1px dashed #808080;
   width: 90%;
   height: 100px;
   padding: 5px;
   margin-top: 50px;
+}
+.calculator__screen p {
+  text-align: right;
 }
 .calculator__row1 button {
   font-size: 20px;
@@ -37,6 +46,20 @@ body {
   background-color: #e6e7ec;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
 }
+.calculator__row1--yellow-button {
+  display: inline-flex;
+}
+.calculator__row1--yellow-button button {
+  background-color: #ffeec0;
+  color: rgba(185, 138, 18, 0.8705882353);
+}
+.calculator__row1--operator-button {
+  display: inline-flex;
+}
+.calculator__row1--operator-button button {
+  background-color: #f89b00;
+  color: #ffffff;
+}
 .calculator__row2 button {
   font-size: 20px;
   width: 70px;
@@ -46,6 +69,13 @@ body {
   margin: 5px;
   background-color: #e6e7ec;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row2--operator-button {
+  display: inline-flex;
+}
+.calculator__row2--operator-button button {
+  background-color: #f89b00;
+  color: #ffffff;
 }
 .calculator__row3 button {
   font-size: 20px;
@@ -57,6 +87,13 @@ body {
   background-color: #e6e7ec;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
 }
+.calculator__row3--operator-button {
+  display: inline-flex;
+}
+.calculator__row3--operator-button button {
+  background-color: #f89b00;
+  color: #ffffff;
+}
 .calculator__row4 button {
   font-size: 20px;
   width: 70px;
@@ -66,6 +103,13 @@ body {
   margin: 5px;
   background-color: #e6e7ec;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
+}
+.calculator__row4--operator-button {
+  display: inline-flex;
+}
+.calculator__row4--operator-button button {
+  background-color: #f89b00;
+  color: #ffffff;
 }
 .calculator__row5 button {
   font-size: 20px;
@@ -77,11 +121,18 @@ body {
   background-color: #e6e7ec;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1019607843);
 }
-.calculator__row5__zero {
+.calculator__row5--zero {
   display: inline-flex;
 }
-.calculator__row5__zero button {
+.calculator__row5--zero button {
   width: 160px;
+}
+.calculator__row5--green {
+  display: inline-flex;
+}
+.calculator__row5--green button {
+  background-color: #11b985;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=index.css.map */

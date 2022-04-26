@@ -3,12 +3,14 @@ $calculator-background-color: #ffffff;
 $calculator-border-color: #e5e6ea78;
 $screen-primary-font-color: #36515a;
 $main-button-color: #e6e7ec;
+$main-button-hover: #bbbbbcc6;
 $main-button-primary-font-color: #b0b1b6;
 $clear-button-background-color: #ffeec0;
-$clear-button-font-color: #e9d5a2;
+$clear-button-font-color: #b98a12de;
 $operator-button-background-color: #f89b00;
 $operator-button-primary-font-color: #ffffff;
 $equal-button-background-color: #11b985;
+$border-primary-color: #808080;
 
 @mixin button-rows {
     button {
@@ -23,6 +25,21 @@ $equal-button-background-color: #11b985;
     }
 }
 
+@mixin orange-buttons {
+    button {
+        display: inline-flex;
+        background-color: $operator-button-background-color;
+    }
+}
+
+@mixin operator-buttons {
+    display: inline-flex;
+    button {
+        background-color: $operator-button-background-color;
+        color: $operator-button-primary-font-color;
+    }
+}
+
 * {
     font-family: "Trebuchet MS";
     font-weight: bold;
@@ -32,50 +49,94 @@ body {
     background: $primary-background-color;
 }
 
+header {
+    padding: 10px;
+}
+
 .calculator {
     display: flex;
     flex-direction: column;
     background-color: $calculator-background-color;
-    border: 3px solid;
+    border: 3px solid; //here for guidance only.
     border-color: $calculator-border-color;
     border-radius: 15px;
     width: 350px;
     height: 650px;
     row-gap: 10px;
-    text-align: end;
+    // text-align: right;
     align-items: center;
 
+    button:hover {
+        border: 1px solid $border-primary-color;
+    }
+
     &__screen {
-        border: 1px dashed grey;
+        border: 1px dashed $border-primary-color;
         width: 90%;
         height: 100px;
         padding: 5px;
         margin-top: 50px;
+
+        p {
+            text-align: right;
+        }
     }
 
     &__row1 {
         @include button-rows();
+
+        &--yellow-button {
+            display: inline-flex;
+            button {
+                background-color: $clear-button-background-color;
+                color: $clear-button-font-color;
+            }
+        }
+
+        &--operator-button {
+            @include operator-buttons();
+        }
     }
 
     &__row2 {
         @include button-rows();
+
+        &--operator-button {
+            @include operator-buttons();
+        }
     }
 
     &__row3 {
         @include button-rows();
+
+        &--operator-button {
+            @include operator-buttons();
+        }
     }
 
     &__row4 {
         @include button-rows();
+
+        &--operator-button {
+            @include operator-buttons();
+        }
     }
 
     &__row5 {
         @include button-rows();
 
-        &__zero {
+        &--zero {
             display: inline-flex;
             button {
                 width: 160px;
+            }
+        }
+
+        &--green {
+            display: inline-flex;
+            button {
+                background-color: #11b985;
+                color: $operator-button-primary-font-color;
             }
         }
     }
