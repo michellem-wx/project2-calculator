@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Calculator</title>
         <link rel="stylesheet" href="index.css" />
-        <script src="calculator.js"></script>
+        <script defer src="calculator.js"></script>
     </head>
     <body>
         <header>
@@ -14,65 +14,62 @@
         </header>
 
         <!-- Wrapper -->
-
         <div class="calculator">
             <!-- Screen -->
-            <div class="calculator__screen">
-                <p>Screen</p>
-            </div>
+            <div id="display" class="calculator__display"><h2></h2></div>
 
             <!-- Row 1 -->
             <div class="calculator__row1">
                 <div class="calculator__row1--yellow-button">
-                    <button>C</button>
+                    <button id="btn-c">C</button>
                 </div>
 
-                <button>(</button>
-                <button>)</button>
+                <button id="btn-(">(</button>
+                <button id="btn-)">)</button>
                 <div class="calculator__row1--operator-button">
-                    <button>/</button>
+                    <button id="btn-/">/</button>
                 </div>
             </div>
 
             <!-- Row 2 -->
             <div class="calculator__row2">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+                <button id="btn-7">7</button>
+                <button id="btn-8">8</button>
+                <button id="btn-9">9</button>
                 <div class="calculator__row2--operator-button">
-                    <button>x</button>
+                    <button id="btn-x">x</button>
                 </div>
             </div>
 
             <!-- Row 3 -->
             <div class="calculator__row3">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
+                <button id="btn-4">4</button>
+                <button id="btn-5">5</button>
+                <button id="btn-6">6</button>
                 <div class="calculator__row3--operator-button">
-                    <button>-</button>
+                    <button id="btn--">-</button>
                 </div>
             </div>
 
             <!-- Row 4 -->
             <div class="calculator__row4">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <button id="btn-1">1</button>
+                <button id="btn-2">2</button>
+                <button id="btn-3">3</button>
                 <div class="calculator__row4--operator-button">
-                    <button>+</button>
+                    <button id="btn-+">+</button>
                 </div>
             </div>
 
             <!-- Row 5 -->
             <div class="calculator__row5">
                 <div class="calculator__row5--zero">
-                    <button>0</button>
+                    <button id="btn-0">0</button>
                 </div>
 
-                <button>.</button>
+                <button id="btn-decimal">.</button>
                 <div class="calculator__row5--green">
-                    <button>=</button>
+                    <button id="btn-=">=</button>
                 </div>
             </div>
         </div>

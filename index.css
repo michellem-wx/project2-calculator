@@ -8,12 +8,15 @@ body {
 }
 
 header {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .calculator {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   border: 3px solid;
   border-color: rgba(229, 230, 234, 0.4705882353);
@@ -21,20 +24,18 @@ header {
   width: 350px;
   height: 650px;
   row-gap: 10px;
-  align-items: center;
 }
 .calculator button:hover {
   border: 1px solid #808080;
 }
-.calculator__screen {
+.calculator__display {
   border: 1px dashed #808080;
   width: 90%;
   height: 100px;
   padding: 5px;
   margin-top: 50px;
-}
-.calculator__screen p {
   text-align: right;
+  font-size: 40px;
 }
 .calculator__row1 button {
   font-size: 20px;
@@ -125,7 +126,7 @@ header {
   display: inline-flex;
 }
 .calculator__row5--zero button {
-  width: 160px;
+  width: 150px;
 }
 .calculator__row5--green {
   display: inline-flex;
