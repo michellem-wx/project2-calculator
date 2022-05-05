@@ -1,15 +1,14 @@
 // FUNCTION: RETURNING NUMBERS
-let currentNumber = ""; //placeholder value - remember 'let' allows for the variable to change.
+let currentNumber = "";
 
-//Function to display the numbers in the UI
 const inputNumber = (anyNumber) => {
-    currentNumber += anyNumber; //each time a number is selected, it will become the 'currentNumber' (note: call currentNumber in the console to check this.)
-    displayNumbers(); // needed to return number in display (another function)
+    currentNumber += anyNumber;
+    displayNumbers();
 };
 
 // FUNCTION: Display numbers on calculator screen
 const displayNumbers = () => {
-    document.getElementById("display").innerText = currentNumber; // setting the innerText of the calc screen to display currentNumber
+    document.getElementById("display").innerText = currentNumber;
 };
 
 // FUNCTION: Add click event to numerical buttons
@@ -27,54 +26,45 @@ const btnNumArray = [
     "decimal",
 ];
 for (let i = 0; i < btnNumArray.length; i++) {
-    const number = btnNumArray[i]; //creating a variable for the array to be used in getting the element by ID through button
+    const number = btnNumArray[i];
     const button = document.getElementById("btn-" + number);
-    const numberValue = button.innerText; //remember: innerText is returning the actual text. this line refers to 'button.' (i.e. the line before this one) and is therefore looking for the innerText of const button!!!
-
-    button.addEventListener("click", () => inputNumber(numberValue)); // added eventListner once the button is clicked - function inputNumber but, numberValue is used (returning actual text)
+    const numberValue = button.innerText;
+    button.addEventListener("click", () => inputNumber(numberValue));
 }
 
-// FUNCTION: Function for operator event - defining the previous and current number
+// FUNCTION: Define previous and current number with operator event
 
 let previousNumber = "";
-let currentOperator = ""; //different operators
+let currentOperator = "";
 
 const inputOperator = (op) => {
     currentOperator = op;
-    previousNumber = currentNumber; //the first number you click (currentNumber) becomes the previous number.
-    currentNumber = ""; //the current number is now an empty string and will be the NEXT number you input (note previous number is defined as an empty string)
+    previousNumber = currentNumber;
+    currentNumber = "";
 };
 
 // FUNCTION 7: Functioning operator buttons with event
-const operatorArray = ["/", "x", "-", "+"]; //create operator array to reference ids in the for loop
+const operatorArray = ["/", "x", "-", "+"];
 for (let i = 0; i < operatorArray.length; i++) {
     const operator = operatorArray[i];
     const button = document.getElementById("btn-" + operator);
-    button.addEventListener("click", () => inputOperator(operator)); //the event is: once an operator is selected, your current number will become previous number, and what follows the operator will now be the current number
+    button.addEventListener("click", () => inputOperator(operator));
 }
 
-// FUNCTION: EQUALS EVENT WITH OPERATORS
-
+// FUNCTION: Operators
 const equalsOperator = () => {
-    // division
     if (currentOperator === "/") {
         currentNumber = Number(previousNumber) / Number(currentNumber);
-        displayNumbers(); //this calls your displayNumbers function you defined earlier
+        displayNumbers();
     }
-
-    // multiplication
     if (currentOperator === "x") {
         currentNumber = Number(currentNumber) * Number(previousNumber);
         displayNumbers();
     }
-    // minus
     if (currentOperator === "-") {
-        currentNumber = Number(previousNumber) - Number(currentNumber); // bug: why is it returning negative??? ==> note the change in console in previous and current number.
-        // currentNumber = Number(currentNumber) - Number(previousNumber);
+        currentNumber = Number(previousNumber) - Number(currentNumber);
         displayNumbers();
     }
-
-    // addition
     if (currentOperator === "+") {
         currentNumber = Number(currentNumber) + Number(previousNumber);
         displayNumbers();
@@ -83,7 +73,7 @@ const equalsOperator = () => {
 
 // FUNCTION: Equals event with event listener
 const equalsButton = document.getElementById("btn-=");
-equalsButton.addEventListener("click", () => equalsOperator()); // your equals button event is calling the equalsOperator function (where all your operators are stored (functions) and returning in display)
+equalsButton.addEventListener("click", () => equalsOperator());
 
 // FUNCTION: Clear all
 const clear = () => {
